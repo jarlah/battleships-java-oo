@@ -1,4 +1,4 @@
-public class HelloWorld{
+public class Main{
 
      public static void main(String []args){
         System.out.println("----- SETTING UP PLAYERS -----");
@@ -19,7 +19,7 @@ public class HelloWorld{
         player2.addShip(3, 1);
         player2.printBoard();
 
-        System.out.println("----- Let's Play - Round 1 - ------");
+        System.out.println("----- Let's Play - Round 1 -------");
 
         // player 1
         player2.sendMissile(1,1);
@@ -30,6 +30,10 @@ public class HelloWorld{
         player1.sendMissile(1,4);
         System.out.println("PLAYER 1");
         player1.printBoard();
+
+        System.out.println("----- Check Game Over -------");
+        System.out.println("Player 1 is " + (player1.hasNoMoreShips() ? "Game Over" : "alive"));
+        System.out.println("Player 2 is " + (player2.hasNoMoreShips() ? "Game Over" : "alive"));
      }
 }
 
@@ -81,7 +85,7 @@ class Player {
     boolean hasNoMoreShips() {
         boolean hasShip = false;
         for (int x  = 0; x < tiles.length; x++) {
-            for (int y  = 0; y < tiles[y].length; y++) {
+            for (int y  = 0; y < tiles[x].length; y++) {
                 if (this.tiles[x][y] == Tile.SHIP) {
                     hasShip = true;
                 }
