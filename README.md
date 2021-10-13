@@ -1,4 +1,10 @@
-```
+Battleships the naive and object oriented approach
+
+`javac Main.java`
+
+`java Main`
+
+````
 ----- SETTING UP PLAYERS -----
 PLAYER 1
 -----
