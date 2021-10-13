@@ -1,31 +1,34 @@
 public class HelloWorld{
 
      public static void main(String []args){
-	System.out.println("----- SETTING UP PLAYERS -----");
+        System.out.println("----- SETTING UP PLAYERS -----");
 
-        // setup
+        System.out.println("PLAYER 1");
         Player player1 = new Player(5);
         player1.initClearWaters();
         player1.addShip(1, 1);
         player1.addShip(1, 2);
         player1.addShip(1, 3);
-	player1.printBoard();
+        player1.printBoard();
 
+        System.out.println("PLAYER 2");
         Player player2 = new Player(5);
         player2.initClearWaters();
         player2.addShip(1, 1);
         player2.addShip(2, 1);
         player2.addShip(3, 1);
-	player2.printBoard();
+        player2.printBoard();
 
         System.out.println("----- Let's Play - Round 1 - ------");
 
         // player 1
         player2.sendMissile(1,1);
+        System.out.println("PLAYER 2");
         player2.printBoard();
 
         // player 2
         player1.sendMissile(1,4);
+        System.out.println("PLAYER 1");
         player1.printBoard();
      }
 }
