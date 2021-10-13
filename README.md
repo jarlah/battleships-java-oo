@@ -4,7 +4,7 @@ Battleships the naive and object oriented approach
 
 `java Main`
 
-````
+```
 ----- SETTING UP PLAYERS -----
 PLAYER 1
 -----
